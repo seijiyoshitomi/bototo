@@ -1,0 +1,32 @@
+{
+  "name": "bototo",
+  "version": "1.0.0",
+  "description": "I don't know.",
+  "main": "index.js",
+  "dependencies": {
+    "@slack/client": "^5.0.2",
+    "cron": "^1.7.1",
+    "dotenv": "^8.1.0",
+    "request": "^2.88.0",
+    "requestretry": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seijiyoshitomi/bototo.git"
+  },
+  "keywords": [
+    "bot",
+    "slack",
+    "practice"
+  ],
+  "author": "seijiyoshitomi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seijiyoshitomi/bototo/issues"
+  },
+  "homepage": "https://github.com/seijiyoshitomi/bototo#readme"
+}
