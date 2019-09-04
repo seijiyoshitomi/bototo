@@ -7,6 +7,13 @@ const webClient = new WebClient(token);
 const rtmClient = new RTMClient(token);
 const request = require('requestretry');
 const { CronJob } = require('cron');
+const http = require('http');
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('bototo');
+  res.end();
+}).listen(process.env.PORT, '0.0.0.0', () => console.log(`Server running at ${process.env.PORT}`));
 
 const replyToMsg = (ch, msg) => {
   webClient.chat.postMessage({
@@ -16,6 +23,14 @@ const replyToMsg = (ch, msg) => {
     icon_emoji: ':angry_trump:'
   });
 };
+
+new CronJob('* */3 * * * *', ()=>{
+  request({
+    url: process.env.URL,
+  }).then(res => {
+    console.log(res.body);
+  });
+}, null, true, 'Asia/Bangkok');
 
 new CronJob('0 0 9 * * 5', ()=>{
   request({
