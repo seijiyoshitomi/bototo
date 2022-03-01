@@ -8,7 +8,7 @@
     "cron": "^1.7.1",
     "dotenv": "^8.1.0",
     "request": "^2.88.0",
-    "requestretry": "^4.0.0"
+    "requestretry": "^7.0.0"
   },
   "devDependencies": {},
   "scripts": {
